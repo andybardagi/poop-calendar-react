@@ -42,7 +42,7 @@ export type UserLogin = {
 };
 
 export type User = {
-    id: string,
+    _id: string,
     username: string,
     firstname: string,
     lastname: string

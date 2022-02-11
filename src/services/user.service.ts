@@ -29,14 +29,6 @@ type loginResponse = {
     token: string;
 };
 
-type errorResponse = {
-    response: {
-        data: {
-            message: string;
-        };
-    };
-};
-
 export async function logInUser(user: UserLogin) {
     try {
         const response = await axios.post(`${URL}/users/login`, user);
@@ -75,8 +67,7 @@ export function isLogged(): boolean {
 export async function getUsers() {
     try {
         const response = await axios.get(
-            'https://poopisapis.herokuapp.com/user',
-            { headers }
+            'https://poopisapis.herokuapp.com/user',  { headers }
         );
         return response.data;
     } catch (error) {
