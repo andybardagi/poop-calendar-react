@@ -75,7 +75,7 @@ export function isLogged(): boolean {
 export async function getUsers() {
     try {
         const response = await axios.get(
-            `"https://cors-anywhere.herokuapp.com/{${URL}/user}`,
+            'https://poopisapis.herokuapp.com/user',
             { headers }
         );
         return response.data;

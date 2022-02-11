@@ -14,7 +14,7 @@ export async function getPoops(userId: string) {
 
 export async function newPoop(userId: string) {
     try {
-        const response = await axios.post(`${URL}/poop/${userId}`, {
+        const response = await axios.post(`${URL}/poop`, {
             _id: userId,
         });
         return response.data;

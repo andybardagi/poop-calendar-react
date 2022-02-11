@@ -1,5 +1,5 @@
-import { Container, Flex, Text, Image, Button, Link } from '@chakra-ui/react';
 import { ArrowForwardIcon } from '@chakra-ui/icons';
+import { Button, Flex, Image, Link, Text } from '@chakra-ui/react';
 import React from 'react';
 import poopEmoji from '../images/logo1200.png';
 import { isLogged } from '../services/user.service';
