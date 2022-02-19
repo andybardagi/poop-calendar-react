@@ -8,14 +8,14 @@ import '@fontsource/source-sans-pro';
 import '@fontsource/poor-story';
 
 ReactDOM.render(
-    <React.StrictMode>
-        <ChakraProvider theme={theme}>
-            <Box bg="#dbdaca" minHeight="100vh">
-                <App />
-            </Box>
-        </ChakraProvider>
-    </React.StrictMode>,
-    document.getElementById('root')
+  <React.StrictMode>
+    <ChakraProvider theme={theme}>
+      <Box bg="#dbdaca" minHeight="100vh">
+        <App />
+      </Box>
+    </ChakraProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -4,11 +4,11 @@ import HomeMain from '../components/HomeMain';
 import MainHolder from '../layouts/MainHolder';
 
 export default function Home() {
-    return (
-        <div>
-            <MainHolder>
-                <HomeMain />
-            </MainHolder>
-        </div>
-    );
+  return (
+    <div>
+      <MainHolder>
+        <HomeMain />
+      </MainHolder>
+    </div>
+  );
 }

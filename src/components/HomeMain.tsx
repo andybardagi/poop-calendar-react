@@ -4,18 +4,27 @@ import React from 'react';
 import poopEmoji from '../images/logo1200.png';
 import { isLogged } from '../services/user.service';
 export default function HomeMain() {
-    return (
-        <Flex direction="column" alignItems="center">
-            <Text fontSize="4xl" fontWeight={800}>
-                Welcome to your Poop Tracker App
-            </Text>
-            <Image src={poopEmoji} w={400} m={10}></Image>
-            <Link href="/poops">
-                <Button>
-                    {isLogged() ? 'New poops' : 'Log In'}
-                    <ArrowForwardIcon marginStart={2} />
-                </Button>
-            </Link>
-        </Flex>
-    );
+  return (
+    <Flex direction="column" alignItems="center">
+      <Text fontSize="4xl" fontWeight={800}>
+        Welcome to your Poop Tracker App
+      </Text>
+      <Image src={poopEmoji} w={400} m={10}></Image>
+
+      <Flex w="100%" justifyContent="space-around">
+        <Link href="/poops/view">
+          <Button variant="outline-primary">
+            {isLogged() ? 'See poops' : 'Log In'}
+          </Button>
+        </Link>
+
+        <Link href="/poops">
+          <Button>
+            {isLogged() ? 'New poops' : 'Log In'}
+            <ArrowForwardIcon marginStart={2} />
+          </Button>
+        </Link>
+      </Flex>
+    </Flex>
+  );
 }
