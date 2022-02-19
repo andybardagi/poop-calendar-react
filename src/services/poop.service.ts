@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const URL = 'https://poopis-apis.herokuapp.com';
+const URL = 'http://localhost:8080';
 
 export async function getPoops(userId: string) {
     try {

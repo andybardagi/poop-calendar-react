@@ -4,9 +4,6 @@ import axios from 'axios';
 // axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 const URL = 'https://poopis-apis.herokuapp.com';
-const headers = {
-    'Access-Control-Allow-Origin': '*',
-};
 
 type registerResponse = {
     username: string;
@@ -66,9 +63,7 @@ export function isLogged(): boolean {
 
 export async function getUsers() {
     try {
-        const response = await axios.get(
-            'https://poopisapis.herokuapp.com/user',  { headers }
-        );
+        const response = await axios.get(`${URL}/user`);
         return response.data;
     } catch (error) {
         throw new Error(`Can't get users from ${URL}`);
