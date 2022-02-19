@@ -42,19 +42,21 @@ export function NewPoopForm() {
   const handleUserChange: ChangeEventHandler<HTMLSelectElement> = (e) => {
     const selectedId =
       e.target.options.selectedIndex > 0
-        ? users[e.target.options.selectedIndex]._id
+        ? users[e.target.options.selectedIndex - 1]._id
         : '';
+    
+    setError(selectedId === '');
 
-    setInput((prevValue) => ({
-      ...prevValue,
+    setInput({
       userId: selectedId,
-    }));
+    });
   };
 
   const submitPoop = async () => {
     if (input.userId == '') {
       setError(true);
     } else {
+      setError(false);
       newPoop(input.userId)
         .then((succ) =>
           toast({
