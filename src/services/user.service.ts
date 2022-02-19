@@ -6,6 +6,8 @@ import axios from 'axios';
 const URL = 'https://poopis-apis.herokuapp.com';
 const headers = {
     'Access-Control-Allow-Origin': '*',
+    'Access-Control-Allow-Headers':
+        'Origin, X-Requested-With, Content-Type, Accept',
 };
 
 type registerResponse = {
@@ -67,7 +69,8 @@ export function isLogged(): boolean {
 export async function getUsers() {
     try {
         const response = await axios.get(
-            'https://poopisapis.herokuapp.com/user',  { headers }
+            'https://poopisapis.herokuapp.com/user',
+            { headers }
         );
         return response.data;
     } catch (error) {
