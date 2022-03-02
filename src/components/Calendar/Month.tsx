@@ -65,6 +65,7 @@ export default function Month({ days, month, monthIndex, ...props }: props) {
                   ? bgColor[maxPoopPerDayColor]
                   : bgColor[d]
               }
+              color={d >= maxPoopPerDayColor ? '#fff' : '#000'}
               boxSize={6}
               textAlign="center"
               justifyContent="center"
